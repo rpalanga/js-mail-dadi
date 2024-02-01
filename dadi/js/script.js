@@ -23,13 +23,13 @@ buttonElement.addEventListener(`click`,
 
             result.innerHTML = "Hai perso";
 
-        } else (numberA === numberB) {
+        } else {
 
             result.innerHTML = "Pareggio";
 
         }
         
-        console.log(result)
+        
         
     }
 
