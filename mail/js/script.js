@@ -15,18 +15,43 @@
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 
-const emailUser = "cassoneGiuseppe@hotmail.com";
+const emailUser = document.querySelector("#email");
+
 const emailGroup = ["cristianciao@hotmail.com", "pirupirucassone@outlook.it", "manuuue@gmail.com","miriamgoccette@outlook.it",];
 const emailResult = document.querySelector("#result");
+let buttonElement = document.querySelector("#button");
 
-for (let i = 0; i < emailGroup.length; i++) {
-    
+buttonElement.addEventListener("click",
 
-    if (emailUser === emailGroup[i]){
-        console.log("emailcassone")
-    } else if (emailUser != emailGroup) {
+    function () {
+        let Emailverifica = false;
+
+        for (let i = 0; i < emailGroup.length; i++) {
+            
+        
+            if (emailUser.value === emailGroup[i]){
+
+                Emailverifica = true;
+
+                
+        
+                
+        
+        
+            } 
+        
+        
+        }
+
+       if (Emailverifica === true){
+        emailResult.innerHTML = `La mail è presente nel database`;
+           
+        } else {
+            emailResult.innerHTML = `La tua mail non è registrata`;
+            
+        }
+        
 
     }
+)
 
-
-}
